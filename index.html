@@ -1,0 +1,93 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function bill(x,y)
+{
+var xval=prompt("Enter MB confused","MB");
+
+
+x=parseInt(xval);
+
+if(x>0 && x<=1024)
+{
+var yval=x/10;
+y=parseInt(yval);
+document.write("The amount to be paid is ",+y);
+}
+
+if(x>1024 && x<=2048)
+{
+	var yval=90+(x/10);
+	y=parseInt(yval);
+	document.write("The amount to be paid is ",+y);
+}
+
+
+if(x>2048 && x<=3072)
+{
+	var yval=150+(x/5);
+	y=parseInt(yval);
+document.write("The amount to be paid is ",+y);
+}
+
+
+if(x>3072 && x<=4096)
+{
+	var yval=250+(x/7);
+	y=parseInt(yval);
+	document.write("The amount to be paid is ",+y);
+}
+
+
+if(x>4096 && x<=4403)
+{
+	var yval=300;
+	y=parseInt(yval);
+	document.write("The amount to be paid is ",+y);
+}
+
+if(x>4403 && x<=5120)
+{
+	var zval=(x-4403)/10;
+	z=parseInt(zval);
+
+	var yval=300+z;
+	y=parseInt(yval);
+
+	document.write("The amount to be paid is ",+y);
+}
+
+
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+<div style="background-color:#3522CB;padding:5px;"><center>
+  <h1 style="color:white;"><b><i>MOBILE BILLING</i></b></h1>
+  <p style="color:orange;">Enter the data consumed to know your bill accurately</p></center>
+</div>
+
+<h2 style="color:#9900ff;"><b>The data charges are made as following:</b></h2>
+
+<center>
+<p>
+<br/>0 - 1 GB: 1rupee/10mb
+<br/>1 - 2 GB: 90 + 1rupee/10mb
+<br/>2 - 3 GB: 150 + 1rupee/5mb
+<br/>3 - 4 GB: 250 + 1rupee/7mb
+<br/>4 - 5 GB: 300(till 4.3 GB) + 1 rupee /10 mb(after 4.3 GB)
+</p>
+
+<input type="button" value="BILL" onclick="bill()"/>
+
+</center>
+
+
+</body>
+</html>
